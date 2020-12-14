@@ -13,8 +13,8 @@ The dataset size is very large, containing 2,322,513 ECG records from 1,676,384
 patients. The training set contains 98% of the data and the validation set contains 2% of the
 data.
 In the paper, the DNN architecture is structured as follows:
-
-Figure 2. RNN model structure.
+/modelstructure.jpg
+Figure 1. RNN model structure.
 
 The network consists of a convolutional layer followed by four residual blocks with two
 convolutional layers per block. Max Pooling and 1*1 convolutional network are included in
@@ -24,5 +24,18 @@ activation function.
 The result in this paper is attractive. The minimum F1 score achieved is 0.8970 (for
 1dAVb) and the maximum F1 score is 1.00 (for LBBB). For all types of disease, the DNN
 prediction accuracy outperforms humans’.
+/paperresult.jpg
+Figure 2. Paper result.
 
-Figure 3. Paper result.
+
+
+
+
+
+
+
+
+
+[1] Ribeiro, A.H., Ribeiro, M.H., Paixão, G.M.M. et al. Automatic diagnosis of the 12-lead
+ECG using a deep neural network.
+Nat Commun 11, 1760 (2020). https://doi.org/10.1038/s41467-020-15432-4
