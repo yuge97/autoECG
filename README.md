@@ -27,7 +27,9 @@ The result in this paper is attractive. The minimum F1 score achieved is 0.8970 
 prediction accuracy outperforms humans’.
 
 ![alt text](/modelresult.jpg)
+
 Figure 2. Paper result.
+
 
 
 
