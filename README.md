@@ -14,6 +14,7 @@ patients. The training set contains 98% of the data and the validation set conta
 data.
 In the paper, the DNN architecture is structured as follows:
 ![alt text](/modelstructure.jpg)
+
 Figure 1. RNN model structure.
 
 The network consists of a convolutional layer followed by four residual blocks with two
@@ -24,6 +25,7 @@ activation function.
 The result in this paper is attractive. The minimum F1 score achieved is 0.8970 (for
 1dAVb) and the maximum F1 score is 1.00 (for LBBB). For all types of disease, the DNN
 prediction accuracy outperforms humans’.
+
 ![alt text](/modelresult.jpg)
 Figure 2. Paper result.
 
