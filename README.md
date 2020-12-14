@@ -13,7 +13,7 @@ The dataset size is very large, containing 2,322,513 ECG records from 1,676,384
 patients. The training set contains 98% of the data and the validation set contains 2% of the
 data.
 In the paper, the DNN architecture is structured as follows:
-/modelstructure.jpg
+(/modelstructure.jpg)
 Figure 1. RNN model structure.
 
 The network consists of a convolutional layer followed by four residual blocks with two
@@ -24,7 +24,7 @@ activation function.
 The result in this paper is attractive. The minimum F1 score achieved is 0.8970 (for
 1dAVb) and the maximum F1 score is 1.00 (for LBBB). For all types of disease, the DNN
 prediction accuracy outperforms humans’.
-/paperresult.jpg
+(/modelresult.jpg)
 Figure 2. Paper result.
 
 
