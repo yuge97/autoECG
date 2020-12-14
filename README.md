@@ -7,7 +7,7 @@ the classification. The dataset in the original paper is very similar to what we
 In the paper, the DNN architecture is structured as follows:
 
 ![alt text](/modelstructure.jpg)
-Figure 1. RNN model structure.
+/n Figure 1. RNN model structure.
 
 The network consists of a convolutional layer followed by four residual blocks with two convolutional layers per block. Max Pooling and 1*1 convolutional network are included in
 the skip connections to make the dimensions match those output from the main branch. The output of the last layer was then fed into a fully connected dense layer with sigmoid
