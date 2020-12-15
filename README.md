@@ -20,9 +20,12 @@ activation function. The result in this paper is attractive. The minimum F1 scor
   While in our cases, we only need to determine a certain ECG data whether is normal or abnormal (also the two probabilities sum to one), so our new output should be a single probability. In order to fulfill this goal, we modified the final dense layer by changing the unit number from six to one while still using the ‘sigmoid’ activation function. Moreover, we used the binary cross entropy function as the new loss function.  
   The coding file of the modified model is in the autoECG-GPU.ipynb file under the root directory.
 
+## 2.2. 2D CNN Model
+  We constructed a 2D convolutional model for this task. We take the data of shape (<# of samples>, 1, 2500, 12) as the input of the model. Then we pass the data into the first convolutional block with 2 convolutional layers, 2 batch normalization layers and a maxpooling layer. Notice that the kernel size of the first layer is (12, 3), which indicates that we analyze 3 of the 12 leads at a time. After this block, there are 7 nearly identical convolutional blocks with 2 convolutional layers and 2 batch normalization layers. While some slightly difference in size of maxpooling, all blocks are the same and the main construction of the model is shown below. The actual kernel sizes and hyperparameter choices can be found in the code itself in 2D_CNN.ipynb.
   
+  ![alt text](/2D_CNN_Model.png)
   
-  
+  Now this model achieves a validation set accuracy of 0.83 and an AUC of 0.84 on the amyloid pace removed data in the data file. If higher performance of this model is desired, tune the model through the hyperparameter tuning scheme provided in this repository (Section 5). In addition, the model could potentially perform better with shorter duration of ECGs due to the nature of convolutional layers, but this is not in any ways or form confirmed. 
   
 # 3. Data Generator
 
@@ -34,6 +37,8 @@ activation function. The result in this paper is attractive. The minimum F1 scor
 ![alt text](/transferlearning.png)    
   
   The coding file of Transfer Learning is in the Transfer.ipynb file under the root directory.
+  
+# 5. Hyperparameter Tuning
 
 [1] Ribeiro, A.H., Ribeiro, M.H., Paixão, G.M.M. et al. Automatic diagnosis of the 12-lead
 ECG using a deep neural network.
